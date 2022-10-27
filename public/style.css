@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  user-select: none;
+  margin: 0;
+  background-color: hsl(203, 20%, 33%);
+  font-family: sans-serif;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2.5vh auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+    url(./images/Dice.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  width: 95vw;
+  height: 95vh;
+  padding: 5%;
+}
+.homepage {
+  color: rgb(200, 200, 200);
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.homepage-info {
+  margin: 10px auto;
+  text-align: center;
+  width: 70%;
+}
+.homepage-info h1 {
+  color: rgb(197, 197, 197);
+  margin: 3px;
+  font-family: cursive;
+
+  font-size: 45px;
+  font-weight: 100;
+}
+.homepage-info p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px 0;
+  font-size: 15px;
+}
+fieldset {
+  border-bottom-left-radius: 10px;
+  border: 1px solid white;
+  padding: 10px;
+  width: 100%;
+}
+fieldset legend {
+  font-family: Bradley Hand ITC;
+  font-size: 3rem;
+  font-weight: 900;
+}
+fieldset label {
+  font-family: comic sans ms;
+  font-weight: 100;
+  display: block;
+  font-size: 1.2rem;
+}
+.homepage button {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: serif;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(256, 52%, 49%);
+  transition: 0.3s;
+}
+.homepage button:hover {
+  background-color: hsla(256, 52%, 49%, 0.6);
+}
+.homepage button:active {
+  padding: 9px 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.die-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px 30px;
+}
+.die-container div {
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  width: 50px;
+  padding: 15px;
+  transition: 0.4s;
+}
+.die-container div:hover {
+  box-shadow: 0px 1px 5px rgb(129, 129, 129);
+}
+.container button {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: serif;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(256, 52%, 49%);
+  transition: 0.3s;
+}
+.container button:hover {
+  background-color: hsla(256, 52%, 49%, 0.6);
+}
+.container button:active {
+  padding: 9px 0;
+}
+.warning {
+  text-align: center;
+}
+.warning h1 {
+  color: rgb(197, 197, 197);
+  font-family: serif;
+}
+.warning button {
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: serif;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(256, 52%, 49%);
+  transition: 0.3s;
+}
+.warning button:hover {
+  background-color: hsla(256, 52%, 49%, 0.6);
+}
+.warning button:active {
+  padding: 9px 0;
+}
+.winner-popup {
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 10px;
+  width: 300px;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(256, 52%, 49%);
+}
+.winner-popup button {
+  width: 70%;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: serif;
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  color: hsl(256, 52%, 49%);
+  transition: 0.3s;
+  margin: 10px 0;
+}
+.winner-popup button:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .homepage {
+    width: 100%;
+  }
+  fieldset legend {
+    font-size: 1.5rem;
+  }
+  .die-container {
+    gap: 10px;
+  }
+}
